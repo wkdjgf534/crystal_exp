@@ -1,8 +1,10 @@
 require "raylib-cr"
 
 class Player
+  MAX_LENGTH = 256
+
   def initialize
-    @poisiotn
+    @position
     @size
     @speed
     @color

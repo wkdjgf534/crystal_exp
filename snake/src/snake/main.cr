@@ -14,13 +14,13 @@ class Main
 
   getter :name
 
-  def initialize(@name : String = "Project")
+  def initialize(@name : String = "Snake")
   end
 
   def run!
     Raylib.init_window(SCREEN_WIDTH, SCREEN_HEIGHT, name)
     Raylib.set_target_fps(60)
-
+    init
     until Raylib.close_window?
       draw
     end
@@ -29,9 +29,6 @@ class Main
   end
 
   def init
-    @frames_counter = 0
-    @game_over = false
-    @pause = false
   end
 
   # Draw method
@@ -39,7 +36,6 @@ class Main
     Raylib.begin_drawing
 
     Raylib.clear_background(Raylib::RAYWHITE)
-    Raylib.draw_text("Congrats! You created your first window!", 190, 200, 20, Raylib::LIGHTGRAY)
 
     Raylib.end_drawing
   end

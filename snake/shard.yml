@@ -1,7 +1,7 @@
 name: snake
 version: 0.1.0
 
-crystal: '>= 1.11.2'
+crystal: '>= 1.12.1'
 
 authors:
   - Eugene Makarikhin <dont@send.spam>
